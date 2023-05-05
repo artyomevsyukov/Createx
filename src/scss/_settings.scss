@@ -111,3 +111,58 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+.main-title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  color: var(--color-gray-900);
+  text-transform: uppercase;
+
+  span {
+    color: var(--color-primary);
+  }
+
+  &--home {
+    color: var(--color-light);
+  }
+}
+.main-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-gray-700);
+
+  &--home {
+    margin-bottom: 60px;
+    color: var(--color-light);
+  }
+}
+
+.btn {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 17px 38px;
+  // line-height: 52px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-light);
+  &--fill {
+    background-color: var(--color-primary);
+    &--primari {
+    }
+  }
+  &--stroke {
+    &-light {
+      border-color: var(--color-light);
+    }
+  }
+}

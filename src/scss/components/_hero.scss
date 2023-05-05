@@ -1,0 +1,22 @@
+.hero {
+  color: var(--color-light);
+  background-image: url("../img/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-gray-800);
+
+  &__content {
+    padding-top: 220px;
+    padding-bottom: 354px;
+    max-width: 590px;
+  }
+
+  &__btns {
+    .btn {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
