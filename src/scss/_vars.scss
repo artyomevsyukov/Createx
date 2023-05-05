@@ -8,5 +8,9 @@
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light-color: #fff;
+  --color-light: #fff;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey-800: #424551;
+  --color-grey-900: #1e212c;
 }
