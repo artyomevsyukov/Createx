@@ -1,0 +1,56 @@
+.mission {
+  padding-bottom: 270px;
+  background-color: var(--color-light);
+
+  &__list {
+    --mission-gap: 94px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--mission-gap) * 2);
+  }
+  &__item {
+    position: relative;
+    padding-top: 73px;
+    background-position: top center;
+    background-size: 48px 48px;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: calc(-1 * var(--mission-gap));
+        width: 1px;
+        height: 100%;
+        background-image: url("../img/divider.svg");
+      }
+    }
+  }
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-gray-900);
+  }
+  &__desc {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-gray-700);
+  }
+
+  &__item--qualiti {
+    background-image: url("../img/quality.svg");
+  }
+  &__item--safety {
+    background-image: url("../img/safety.svg");
+  }
+  &__item--comfort {
+    background-image: url("../img/comfort.svg");
+  }
+}
