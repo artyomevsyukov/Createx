@@ -3,7 +3,7 @@ const swiper = new Swiper(".swiper", {
     spaceBetween: 30,
     loop: true,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".portfolio-section__next",
+        prevEl: ".portfolio-section__prev",
     },
 });
