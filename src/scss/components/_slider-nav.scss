@@ -1,5 +1,7 @@
 .slider-nav {
     @include flex-v-center;
+    position: relative;
+    z-index: 15;
     &__btn {
         @include flex-all-center;
 

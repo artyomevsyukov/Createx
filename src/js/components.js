@@ -1,1 +1,1 @@
-import "./components/sliders";
+import "./components/sliders.js";

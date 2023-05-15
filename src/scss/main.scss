@@ -3,7 +3,7 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
-@import "vendor";
+// @import "vendor";
 
 // подключения блоков страницы (бльшие компоненты)
 @import "./components/header";
@@ -19,3 +19,4 @@
 @import "./components/video-block";
 @import "./components/form-field";
 @import "./components/slider-nav";
+@import "./components/learn-more";

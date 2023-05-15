@@ -1,11 +1,14 @@
-const swiper = new Swiper(".swiper", {
-    loop: true,
+const bodyStyle = window.getComputedStyle(document.body);
+const gap = parseInt(bodyStyle.getPropertyValue("--grid-gap"));
+console.log(gap);
+
+const portfolioSlider = new Swiper(".portfolio-section__items", {
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: gap,
     // loop: true,
-    // slidePerGroup: 2,
+    // slidePerGroup: 3,
     navigation: {
-        prevEl: ".portfolio-section__prev",
         nextEl: ".portfolio-section__next",
+        prevEl: ".portfolio-section__prev",
     },
 });
