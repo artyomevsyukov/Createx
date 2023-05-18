@@ -27,3 +27,8 @@
         }
     }
 }
+
+.slider-nav__btn.swiper-button-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}

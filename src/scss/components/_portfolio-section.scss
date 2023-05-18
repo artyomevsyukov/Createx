@@ -17,6 +17,16 @@
     &__items {
         padding: 100px;
         margin: -100px;
+
+        .swiper-slide {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        .slider-visible {
+            opacity: 1;
+            visibility: visible;
+        }
     }
     // &__slilder-nav {
     //     // transform: translateX(12px);
