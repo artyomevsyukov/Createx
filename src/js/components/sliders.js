@@ -1,18 +1,6 @@
 const bodyStyles = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyles.getPropertyValue("--grid-gap"));
 
-// const swiper = new Swiper(".swiper", {
-//     // loop: true,
-//     slidesPerView: 3,
-//     spaceBetween: 30,
-//     // loop: true,
-//     // slidePerGroup: 2,
-//     navigation: {
-//         prevEl: ".portfolio-section__prev",
-//         nextEl: ".portfolio-section__next",
-//     },
-// });
-
 const portSlider = document.querySelector(".portfolio-section__items");
 
 const portfolioSlider = new Swiper(portSlider, {
