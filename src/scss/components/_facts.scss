@@ -10,11 +10,19 @@
         max-width: 736px;
         margin: 0 auto;
     }
+
+    &__title {
+        margin-bottom: 62px;
+    }
 }
 
 .facts-element {
     &__circle {
+        margin-bottom: 20px;
+
         position: relative;
+        width: 148px;
+        height: 148px;
 
         svg {
             position: absolute;
@@ -23,5 +31,30 @@
             top: 0;
             bottom: 0;
         }
+
+        .progress {
+            transform: rotate(-90deg) translateX(20px);
+            transform-origin: center;
+        }
+        .progress-bg {
+            // stroke: green;
+        }
+    }
+    &__value {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 150%;
+        color: var(--color-gray-900);
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-gray-900);
     }
 }

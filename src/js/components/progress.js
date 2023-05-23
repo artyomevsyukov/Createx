@@ -1,7 +1,7 @@
 const circles = document.querySelector(".progress");
 
 const progressAnimation = () => {
-    let percentegeProgress = Math.floor(98);
+    let percentegeProgress = Math.floor(70);
 
     let radius = circles.getAttribute("r");
     console.log("radius");
