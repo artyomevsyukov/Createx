@@ -18,9 +18,11 @@
 
 .facts-element {
     &__circle {
-        margin-bottom: 20px;
+        --progress-stroke: #000;
+        --progress-bg-opacity: 0.3;
 
         position: relative;
+        margin-bottom: 20px;
         width: 148px;
         height: 148px;
 
@@ -33,11 +35,26 @@
         }
 
         .progress {
+            stroke: var(--progress-stroke);
             transform: rotate(-90deg) translateX(20px);
             transform-origin: center;
         }
         .progress-bg {
-            // stroke: green;
+            stroke: var(--progress-stroke);
+            opacity: var(--progress-bg-opacity);
+        }
+
+        &--one-color {
+            --progress-stroke: #f89828;
+        }
+        &--two-color {
+            --progress-stroke: #f52f6e;
+        }
+        &--three-color {
+            --progress-stroke: #5a87fc;
+        }
+        &--four-color {
+            --progress-stroke: #03cea4;
         }
     }
     &__value {
@@ -52,6 +69,8 @@
     }
 
     &__text {
+        display: block;
+        text-align: center;
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
