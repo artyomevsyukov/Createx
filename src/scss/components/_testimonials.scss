@@ -1,9 +1,12 @@
 .testimonials {
-    padding: 115px 0;
+    padding-top: 115px;
     background-color: var(--color-gray-200);
 
     &__content {
         max-width: 612px;
+    }
+    &__img {
+        margin-bottom: -60px;
     }
     &__title {
         margin-bottom: 60px;
