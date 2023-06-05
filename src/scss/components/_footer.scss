@@ -1,0 +1,32 @@
+.footer {
+    padding: 80px 0;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: var(--color-gray-900);
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 50px;
+    }
+
+    &__left {
+        display: flex;
+        flex-wrap: wrap;
+        grid-column: 7 span;
+    }
+    &__desc {
+        width: 100%;
+    }
+    &__form {
+        grid-column: 5 span;
+    }
+    &__address {
+        grid-column: 4 span;
+    }
+    &__nav {
+        grid-column: 8 span;
+    }
+    &__copyright {
+        grid-column: 12 span;
+    }
+}
