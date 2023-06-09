@@ -6,16 +6,30 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        gap: 50px;
+        gap: var(--grid-gap);
     }
 
     &__left {
-        display: flex;
-        flex-wrap: wrap;
         grid-column: 7 span;
     }
+    &__logo {
+        margin-right: 60px;
+    }
+
+    &__top {
+        @include flex-v-center;
+        margin-bottom: 22px;
+    }
+
     &__desc {
+        max-width: 493px;
+        margin: 0;
         width: 100%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #ffffff;
+        opacity: 0.6;
     }
     &__form {
         grid-column: 5 span;
@@ -29,4 +43,59 @@
     &__copyright {
         grid-column: 12 span;
     }
+}
+
+.footer-form {
+    &__subtitle {
+        margin: 0;
+        margin-bottom: 24px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 150%;
+        color: var(--color-light);
+    }
+    &__items {
+        @include flex-v-center;
+        margin-bottom: 15px;
+    }
+    .form-field {
+        margin: 0;
+        width: 364px;
+    }
+    .form-field__input {
+        background-color: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &__btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding: 12px 21px;
+        letter-spacing: normal;
+    }
+
+    &__desc {
+        margin: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: var(--color-light);
+        opacity: 0.6;
+    }
+}
+
+.footer-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+.footer-address {
+    padding-top: 20px;
+    font-style: normal;
 }
