@@ -1,5 +1,5 @@
 .footer {
-    padding: 80px 0;
+    padding: 82px 0;
     color: rgba(255, 255, 255, 0.6);
     background-color: var(--color-gray-900);
 
@@ -42,6 +42,11 @@
     }
     &__copyright {
         grid-column: 12 span;
+
+        padding-top: 32px;
+        font-size: 12px;
+        line-height: 150%;
+        color: var(--color-light);
     }
 }
 
@@ -88,6 +93,8 @@
 
 .footer-title {
     margin: 0;
+    margin-bottom: 15px;
+
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
@@ -98,4 +105,56 @@
 .footer-address {
     padding-top: 20px;
     font-style: normal;
+
+    &__item {
+        display: block;
+        font-size: 16px;
+        line-height: 160%;
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+
+        a {
+            color: inherit;
+        }
+    }
+    &__title {
+    }
+    &__name {
+        margin: 0;
+        color: var(--color-light);
+    }
+}
+
+.footer-nav {
+    display: flex;
+    padding-top: 20px;
+    padding-left: 54px;
+    &__col {
+        &:not(:last-child) {
+            margin-right: 125px;
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: inherit;
+    }
+}
+.footer__copyright {
+    span {
+        padding-left: 22px;
+        background-image: url("../img/heart.svg");
+        background-repeat: no-repeat;
+        // background-position: left center;
+        background-position: 2px center;
+        background-size: 16px 16px;
+    }
 }
