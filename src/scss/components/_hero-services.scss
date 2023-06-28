@@ -1,0 +1,12 @@
+.page-hero {
+    padding-top: 152px;
+    padding-bottom: 179px;
+    background-color: var(--color-gray-200);
+
+    &__title {
+        margin: 0;
+    }
+    &__desc {
+        margin: 0;
+    }
+}
