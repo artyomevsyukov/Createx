@@ -1,15 +1,33 @@
 .services {
     position: relative;
+    overflow: hidden;
     padding-top: 120px;
     padding-bottom: 180px;
     background-color: var(--color-light);
 
+    &__decorate-1 {
+        position: absolute;
+        bottom: -248px;
+        left: -7px;
+    }
+    &__decorate-2 {
+        position: absolute;
+        top: 528px;
+        right: -9px;
+    }
+    &__list {
+        position: relative;
+        z-index: 5;
+    }
     &__item {
         display: grid;
+        align-items: center;
         grid-template-columns: repeat(12, 1fr);
         gap: var(-grid-gap);
-        margin-bottom: 117px;
-        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 117px;
+        }
 
         &--reverse {
             .services__info {
