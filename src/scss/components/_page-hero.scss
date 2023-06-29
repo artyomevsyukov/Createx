@@ -1,16 +1,16 @@
 .page-hero {
     padding-top: 152px;
-    padding-bottom: 179px;
-    // background-color: var(--color-gray-200);
-    background-image: url("../img/services-hero-bg.png");
-    background-position: right -10px top;
+    padding-bottom: 80px;
+    min-height: 600px;
     background-repeat: no-repeat;
+    background-color: var(--color-gray-200);
 
     &__breadcrumbs {
         margin-bottom: 40px;
     }
     &__title {
         margin: 0;
+        max-width: 600px;
         margin-bottom: 24px;
         text-transform: uppercase;
         font-size: 72px;
@@ -27,5 +27,15 @@
         font-family: Ubuntu;
         line-height: 150%;
         color: var(--gray-700, #787a80);
+    }
+
+    &--services {
+        background-image: url("../img/services-hero-bg.png");
+        background-position: right -10px top;
+    }
+
+    &--services-inner {
+        background-image: url("../img/services-inner-hero-bg.png");
+        background-position: right 2px top -2px;
     }
 }
