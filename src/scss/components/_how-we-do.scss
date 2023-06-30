@@ -1,0 +1,73 @@
+.how-we-do {
+    padding: 47px 0;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--grid-gap);
+        counter-reset: list;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        grid-column: 3 span;
+
+        &::before {
+            margin-bottom: 15px;
+            counter-increment: list;
+            content: "0" counter(list);
+            color: var(--gray-400, #d7dadd);
+            font-size: 46px;
+            font-family: Ubuntu;
+            font-weight: 700;
+            line-height: 130%;
+        }
+        // &:not(:last-child) {
+        //     background-image: url("../img/how-we-do-line.svg");
+        //     background-repeat: no-repeat;
+        //     background-position: top 25px right;
+        // }
+        &:not(:last-child) {
+            &::after {
+                position: absolute;
+                content: "";
+                top: 25px;
+                right: 0;
+                height: 1px;
+                width: 75%;
+                background-image: url("../img/how-we-do-line.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 60px;
+        color: var(--gray-900, #1e212c);
+        font-size: 46px;
+        font-family: Ubuntu;
+        font-weight: 700;
+        line-height: 130%;
+    }
+
+    &__subtitle {
+        margin: 0;
+        margin-bottom: 8px;
+        color: var(--gray-900, #1e212c);
+        font-size: 20px;
+        font-family: Ubuntu;
+        font-weight: 700;
+        line-height: 150%;
+    }
+    &__desc {
+        margin: 0;
+        color: var(--gray-700, #787a80);
+        font-size: 16px;
+        font-family: Ubuntu;
+        line-height: 160%;
+    }
+}
