@@ -1,0 +1,100 @@
+.we-offer {
+    padding: 113px 0;
+    background: var(--color-light);
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--grid-gap);
+    }
+
+    &__img {
+        grid-column: 7 span;
+    }
+
+    &__content {
+        grid-column: 5 span;
+        padding-left: 67px;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 60px;
+        color: var(--gray-900, #1e212c);
+        font-size: 46px;
+        font-family: "Lato", sans-serif;
+        // font-weight: 900;
+        line-height: 130%;
+    }
+
+    &__accordion {
+        &:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+        .accordion__control {
+            position: relative;
+            text-align: left;
+            padding-right: 20px;
+            padding-left: 44px;
+        }
+        .accordion__icon {
+            position: absolute;
+            top: 7px;
+            left: 2px;
+            width: 22px;
+            height: 22px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                // transform: translateY(50%);
+                // border-radius: 100%;
+                // width: 100%;
+                width: 22px;
+                height: 2px;
+                background-color: var(--color-primary);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 0;
+                // transform: translateX(50%);
+                // border-radius: 100%;
+                width: 2px;
+                height: 22px;
+                background-color: var(--color-primary);
+                transition: opaciti 1s ease-in-out;
+            }
+        }
+
+        .accordion__title {
+            margin-bottom: 55px;
+            color: var(--gray-900, #1e212c);
+            font-size: 28px;
+            // font-family: Ubuntu;
+            // font-weight: 700;
+            line-height: 150%;
+        }
+        .accordion__content {
+            padding: 11px 20px 13px 45px;
+            p {
+                margin: 0;
+                // padding-left: 44px;
+                color: var(--gray-700, #787a80);
+                font-size: 16px;
+                font-family: Ubuntu;
+                line-height: 160%;
+            }
+        }
+    }
+    .is-open .accordion__icon {
+        transform: none;
+
+        &::after {
+            opacity: 0;
+        }
+    }
+}

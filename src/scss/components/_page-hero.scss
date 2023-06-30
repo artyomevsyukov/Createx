@@ -1,6 +1,6 @@
 .page-hero {
     padding-top: 152px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     min-height: 600px;
     background-repeat: no-repeat;
     background-color: var(--color-gray-200);
@@ -11,7 +11,7 @@
     &__title {
         margin: 0;
         max-width: 600px;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
         text-transform: uppercase;
         font-size: 72px;
         font-family: Ubuntu;
@@ -36,6 +36,6 @@
 
     &--services-inner {
         background-image: url("../img/services-inner-hero-bg.png");
-        background-position: right 2px top -2px;
+        background-position: right 2px top -8px;
     }
 }
