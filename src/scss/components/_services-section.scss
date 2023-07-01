@@ -5,13 +5,16 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    &__list {
+        margin-bottom: 80px;
+    }
 }
 
 .services-list {
-    margin-bottom: 80px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--grid-gap);
+    &__item {
+        grid-column: 3 span;
+    }
 }
 .services-item {
     position: relative;

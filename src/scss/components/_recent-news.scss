@@ -6,10 +6,7 @@
     }
     &__list {
         margin-bottom: 80px;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(2, 255px);
-        gap: var(--grid-gap);
     }
     &__item {
         grid-column: 5 span;
