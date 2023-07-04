@@ -1,0 +1,96 @@
+.pricing {
+    padding: 80px 0 0;
+    background: var(--gray-200, #f4f5f6);
+
+    &__desc {
+        margin-bottom: 60px;
+    }
+}
+
+.table {
+    // padding: 32px 51px 32px 24px;
+    border: 1px solid var(--gray-300, #e5e8ed);
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+        0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+        0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+        0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    background-color: var(--color-light);
+
+    &__th {
+        padding-top: 29px;
+        padding-bottom: 24px;
+        &:first-child {
+            padding-left: 24px;
+            padding-right: 24px;
+            text-align: left;
+            vertical-align: bottom;
+            color: var(--gray-900, #1e212c);
+            font-size: 18px;
+            font-family: Ubuntu;
+            font-weight: 700;
+            line-height: 150%;
+        }
+    }
+
+    &__body {
+        .table__row {
+            &:nth-child(odd) {
+                background-color: var(--gray-200, #f4f5f6);
+            }
+        }
+    }
+    &__col {
+        padding: 16px 0 16px 24px;
+        text-align: center;
+        vertical-align: middle;
+        &:first-child {
+            text-align: left;
+        }
+
+        .btn {
+            padding: 8px 8px;
+        }
+    }
+
+    &__check {
+        font-size: 0;
+        vertical-align: middle;
+        display: inline-block;
+        background-image: url("../img/table-check.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__th {
+        color: var(--gray-900, #1e212c);
+        font-size: 18px;
+        font-family: Ubuntu;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    &__heading {
+        margin-bottom: 2px;
+        color: var(--gray-900, #1e212c);
+        text-align: center;
+        font-size: 24px;
+        font-family: Ubuntu;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    &__pre {
+        color: var(--gray-700, #787a80);
+        text-align: center;
+        font-size: 18px;
+        font-family: Ubuntu;
+        font-weight: 700;
+        line-height: 150%;
+    }
+}
