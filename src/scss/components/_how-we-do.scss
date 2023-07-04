@@ -1,5 +1,5 @@
 .how-we-do {
-    padding: 47px 0;
+    padding: 47px 0 117px;
     &__list {
         counter-reset: list;
     }
@@ -44,7 +44,7 @@
     &__title {
         margin: 0;
         margin-bottom: 60px;
-        color: var(--gray-900, #1e212c);
+        color: var(--color-gray-900, #1e212c);
         font-size: 46px;
         font-family: Ubuntu;
         font-weight: 700;
@@ -54,7 +54,7 @@
     &__subtitle {
         margin: 0;
         margin-bottom: 8px;
-        color: var(--gray-900, #1e212c);
+        color: var(--color-gray-900, #1e212c);
         font-size: 20px;
         font-family: Ubuntu;
         font-weight: 700;
@@ -62,7 +62,7 @@
     }
     &__desc {
         margin: 0;
-        color: var(--gray-700, #787a80);
+        color: var(--color-gray-700, #787a80);
         font-size: 16px;
         font-family: Ubuntu;
         line-height: 160%;

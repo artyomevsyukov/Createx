@@ -6,6 +6,8 @@
         max-width: 612px;
     }
     &__img {
+        position: relative;
+        z-index: 5;
         margin-bottom: -60px;
     }
     &__title {
