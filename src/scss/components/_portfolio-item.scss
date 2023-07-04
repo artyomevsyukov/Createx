@@ -1,43 +1,4 @@
-.related-projects {
-    padding: 179px 0 92px;
-    background-color: var(--color-light);
-
-    &__top {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin-bottom: 48px;
-    }
-
-    &__title {
-        margin: 0;
-        padding-bottom: 9px;
-        max-width: 710px;
-    }
-    &__items {
-        padding: 100px;
-        margin: -100px;
-
-        .swiper-slide {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-        }
-        .slider-visible {
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-    // &__slilder-nav {
-    //     // transform: translateX(12px);
-    // }
-
-    &__learn {
-        margin-top: 80px;
-    }
-}
-
-.related-projects-item {
+.portfolio-item {
     display: flex;
     flex-direction: column;
     overflow: hidden;
