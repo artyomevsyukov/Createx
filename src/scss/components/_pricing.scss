@@ -1,7 +1,12 @@
 .pricing {
-    padding: 80px 0 0;
+    position: relative;
+    padding: 80px 0 40px 0;
     background: var(--gray-200, #f4f5f6);
-
+    &__bg {
+        position: absolute;
+        left: -8px;
+        top: 0;
+    }
     &__desc {
         margin-bottom: 60px;
     }
@@ -9,6 +14,8 @@
 
 .table {
     // padding: 32px 51px 32px 24px;
+    position: relative;
+    z-index: 5;
     border: 1px solid var(--gray-300, #e5e8ed);
     border-collapse: collapse;
     width: 100%;
@@ -22,6 +29,7 @@
     &__th {
         padding-top: 29px;
         padding-bottom: 24px;
+        padding-right: 26px;
         &:first-child {
             padding-left: 24px;
             padding-right: 24px;
@@ -40,19 +48,50 @@
             &:nth-child(odd) {
                 background-color: var(--gray-200, #f4f5f6);
             }
+            &:last-child {
+                .table__col {
+                    padding-top: 28px;
+                    padding-bottom: 28px;
+                }
+            }
         }
     }
     &__col {
-        padding: 16px 0 16px 24px;
+        padding: 16px 0;
+        padding-right: 10px;
         text-align: center;
         vertical-align: middle;
+        color: var(--gray-800, #424551);
+
+        /* base/regular */
+        font-size: 16px;
+        font-family: Ubuntu;
+        line-height: 160%;
         &:first-child {
+            padding-left: 24px;
             text-align: left;
         }
 
         .btn {
-            padding: 8px 8px;
+            padding: 0 20px;
+            // padding: 0px 23px 0 31px;
+
+            // padding: 8px 8px;
+            text-align: center;
+            font-size: 12px;
+            font-family: Ubuntu;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
+    }
+    &__text {
+        color: var(--gray-800, #424551);
+        text-align: center;
+        font-size: 16px;
+        font-family: Ubuntu;
+        line-height: 160%;
     }
 
     &__check {
