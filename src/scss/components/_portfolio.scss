@@ -1,0 +1,67 @@
+.portfolio {
+    position: relative;
+}
+.portfolio-tabs-nav {
+    --gap: 20px;
+    @include flex-v-center;
+
+    margin-bottom: 61px;
+
+    transform: translateY(-60px);
+    &__item {
+        width: calc((100% - (var(--gap) * 4)) / 5);
+
+        &:not(:last-child) {
+            margin-right: var(--gap);
+        }
+    }
+
+    &__btn {
+        @include flex-colum-center;
+
+        justify-content: center;
+        border-radius: 4px;
+        padding: 15px;
+        min-height: 154px;
+        width: 100%;
+        box-shadow: var(--shadow-small);
+        color: var(--primary);
+        background-color: var(--white, #fff);
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+        &--active {
+            color: var(--white);
+            fill: var(--white);
+            background-color: var(--primary);
+
+            .portfolio-tabs-nav__text {
+                color: var(--white);
+            }
+        }
+    }
+
+    &__icon {
+        margin-bottom: 16px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        color: currentColor;
+        fill: inherit;
+        // fill: var(--primary);
+    }
+    &__text {
+        color: var(--gray-600, #9a9ca5);
+        font-size: 16px;
+        font-family: Ubuntu;
+        font-weight: 700;
+        line-height: 160%;
+        transition: color 0.3s ease-in-out;
+    }
+}
+
+.portfolio-tabs {
+    &__item {
+        grid-column: 4 span;
+    }
+}
