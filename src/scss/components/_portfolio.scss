@@ -1,5 +1,6 @@
 .portfolio {
     position: relative;
+    padding-bottom: 100px;
 }
 .portfolio-tabs-nav {
     --gap: 20px;
@@ -33,6 +34,7 @@
             color: var(--white);
             fill: var(--white);
             background-color: var(--primary);
+            pointer-events: none;
 
             .portfolio-tabs-nav__text {
                 color: var(--white);
@@ -49,6 +51,7 @@
         color: currentColor;
         fill: inherit;
         // fill: var(--primary);
+        pointer-events: none;
     }
     &__text {
         color: var(--gray-600, #9a9ca5);
@@ -57,11 +60,40 @@
         font-weight: 700;
         line-height: 160%;
         transition: color 0.3s ease-in-out;
+        pointer-events: none;
     }
 }
 
 .portfolio-tabs {
     &__item {
         grid-column: 4 span;
+
+        // &--hidden {
+        //     display: none;
+        // }
+
+        &--visible {
+            display: block !important;
+        }
+    }
+}
+
+.portfolio-more {
+    margin-top: 60px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--gray-800, #424551);
+    font-size: 16px;
+    font-family: Ubuntu;
+    font-weight: 700;
+    line-height: 160%;
+
+    svg {
+        margin-right: 16px;
+        width: 24px;
+        height: 24px;
+        color: inherit;
+        fill: currentColor;
+        object-fit: cover;
     }
 }

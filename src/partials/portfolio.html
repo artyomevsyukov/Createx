@@ -3,7 +3,7 @@
     <h2 class="visually-hidden">Portfolio</h2>
     <ul class="list-reset portfolio-tabs-nav">
       <li class="portfolio-tabs-nav__item">
-        <button class="btn-reset portfolio-tabs-nav__btn portfolio-tabs-nav__btn--active">
+        <button class="btn-reset portfolio-tabs-nav__btn portfolio-tabs-nav__btn--active" data-path="all">
           <svg class="portfolio-tabs-nav__icon">
             <use xlink:href="img/sprite.svg#house"></use>
           </svg>
@@ -11,7 +11,7 @@
         </button>
       </li>
       <li class="portfolio-tabs-nav__item">
-        <button class="btn-reset portfolio-tabs-nav__btn">
+        <button class="btn-reset portfolio-tabs-nav__btn" data-path="constr">
           <svg class="portfolio-tabs-nav__icon">
             <use xlink:href="img/sprite.svg#services1"></use>
           </svg>
@@ -19,7 +19,7 @@
         </button>
       </li>
       <li class="portfolio-tabs-nav__item">
-        <button class="btn-reset portfolio-tabs-nav__btn">
+        <button class="btn-reset portfolio-tabs-nav__btn" data-path="dev">
           <svg class="portfolio-tabs-nav__icon">
             <use xlink:href="img/sprite.svg#services2"></use>
           </svg>
@@ -27,7 +27,7 @@
         </button>
       </li>
       <li class="portfolio-tabs-nav__item">
-        <button class="btn-reset portfolio-tabs-nav__btn">
+        <button class="btn-reset portfolio-tabs-nav__btn" data-path="design">
           <svg class="portfolio-tabs-nav__icon">
             <use xlink:href="img/sprite.svg#services3"></use>
           </svg>
@@ -35,7 +35,7 @@
         </button>
       </li>
       <li class="portfolio-tabs-nav__item">
-        <button class="btn-reset portfolio-tabs-nav__btn">
+        <button class="btn-reset portfolio-tabs-nav__btn" data-path="repair">
           <svg class="portfolio-tabs-nav__icon">
             <use xlink:href="img/sprite.svg#services4"></use>
           </svg>
@@ -45,7 +45,7 @@
     </ul>
     <ul class="list-reset portfolio-tabs grid">
       <li class="portfolio-tabs__item">
-        <a href="#" class="portfolio-item">
+        <a href="#" class="portfolio-item" data-target="repair">
           <img class="portfolio-item__img" src="img/portfolio1.jpg" alt="Portfolio cover">
           <div class="portfolio-item__content">
             <h3 class="portfolio-item__title">Red Finger Building</h3>
@@ -55,7 +55,7 @@
         </a>
       </li>
       <li class="portfolio-tabs__item">
-        <a href="#" class="portfolio-item">
+        <a href="#" class="portfolio-item" data-target="design">
           <img class="portfolio-item__img" src="img/portfolio1.jpg" alt="Portfolio cover">
           <div class="portfolio-item__content">
             <h3 class="portfolio-item__title">Red Finger Building</h3>
@@ -65,7 +65,7 @@
         </a>
       </li>
       <li class="portfolio-tabs__item">
-        <a href="#" class="portfolio-item">
+        <a href="#" class="portfolio-item" data-target="dev">
           <img class="portfolio-item__img" src="img/portfolio1.jpg" alt="Portfolio cover">
           <div class="portfolio-item__content">
             <h3 class="portfolio-item__title">Red Finger Building</h3>
@@ -75,7 +75,7 @@
         </a>
       </li>
       <li class="portfolio-tabs__item">
-        <a href="#" class="portfolio-item">
+        <a href="#" class="portfolio-item" data-target="constr">
           <img class="portfolio-item__img" src="img/portfolio1.jpg" alt="Portfolio cover">
           <div class="portfolio-item__content">
             <h3 class="portfolio-item__title">Red Finger Building</h3>
@@ -85,7 +85,7 @@
         </a>
       </li>
       <li class="portfolio-tabs__item">
-        <a href="#" class="portfolio-item">
+        <a href="#" class="portfolio-item" data-target="design">
           <img class="portfolio-item__img" src="img/portfolio1.jpg" alt="Portfolio cover">
           <div class="portfolio-item__content">
             <h3 class="portfolio-item__title">Red Finger Building</h3>
@@ -95,7 +95,7 @@
         </a>
       </li>
       <li class="portfolio-tabs__item">
-        <a href="#" class="portfolio-item">
+        <a href="#" class="portfolio-item" data-target="constr">
           <img class="portfolio-item__img" src="img/portfolio1.jpg" alt="Portfolio cover">
           <div class="portfolio-item__content">
             <h3 class="portfolio-item__title">Red Finger Building</h3>
@@ -105,7 +105,7 @@
         </a>
       </li>
       <li class="portfolio-tabs__item">
-        <a href="#" class="portfolio-item">
+        <a href="#" class="portfolio-item" data-target="constr">
           <img class="portfolio-item__img" src="img/portfolio1.jpg" alt="Portfolio cover">
           <div class="portfolio-item__content">
             <h3 class="portfolio-item__title">Red Finger Building</h3>
@@ -115,7 +115,7 @@
         </a>
       </li>
       <li class="portfolio-tabs__item">
-        <a href="#" class="portfolio-item">
+        <a href="#" class="portfolio-item" data-target="design">
           <img class="portfolio-item__img" src="img/portfolio1.jpg" alt="Portfolio cover">
           <div class="portfolio-item__content">
             <h3 class="portfolio-item__title">Red Finger Building</h3>
@@ -135,5 +135,13 @@
         </a>
       </li>
     </ul>
+    <div class="centered">
+      <button class=" btn-reset portfolio-more">
+        <svg class="portfolio-more__icon">
+          <use xlink:href="img/sprite.svg#load-more"></use>
+        </svg>
+        Load more
+      </button>
+    </div>
   </div>
 </section>
