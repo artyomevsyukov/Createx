@@ -34,6 +34,8 @@
 @import "./components/portfolio";
 @import "./components/clients";
 
+@import "./components/hero-work-inner";
+
 // подключения компонентов страницы (маленькие компоненты)
 @import "./components/nav";
 @import "./components/header-contacts";
@@ -42,3 +44,4 @@
 @import "./components/social";
 @import "./components/breadcrumbs";
 @import "./components/portfolio-item";
+@import "./components/work-images";
