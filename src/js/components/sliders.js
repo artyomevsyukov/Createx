@@ -148,3 +148,26 @@ const testimonialsSlider = new Swiper(".testimonials__items", {
         prevEl: ".testimonials__prev",
     },
 });
+// workSlider
+
+const workImeges = document.querySelector(".work-images-slider");
+
+if (workImeges) {
+    const workSlider = new Swiper(".work-images-nav", {
+        spaceBetween: 20,
+        slidesPerView: 10,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    const workSwiperNav = new Swiper(workImeges, {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".work-images__next",
+            prevEl: ".work-images__prev",
+        },
+        thumbs: {
+            swiper: workSlider,
+        },
+    });
+}
