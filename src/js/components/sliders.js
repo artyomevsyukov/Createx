@@ -138,7 +138,7 @@ if (relatedSlider) {
             nextNextActiveSlide.classList.add("slider-visible");
         });
 }
-
+// testimonialsSlider
 const testimonialsSlider = new Swiper(".testimonials__items", {
     slidesPerView: 1,
     spaceBetween: gap,
@@ -148,8 +148,8 @@ const testimonialsSlider = new Swiper(".testimonials__items", {
         prevEl: ".testimonials__prev",
     },
 });
-// workSlider
 
+// workSlider
 const workImeges = document.querySelector(".work-images-slider");
 
 if (workImeges) {
@@ -168,6 +168,22 @@ if (workImeges) {
         },
         thumbs: {
             swiper: workSlider,
+        },
+    });
+}
+
+// historySlider
+const historySlider = document.querySelector(".history-slider");
+
+if (historySlider) {
+    const workSlider = new Swiper(historySlider, {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        // loop: true,
+
+        navigation: {
+            nextEl: ".history__next",
+            prevEl: ".history__prev",
         },
     });
 }
