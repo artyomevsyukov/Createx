@@ -186,4 +186,39 @@ if (historySlider) {
             prevEl: ".history__prev",
         },
     });
+
+    workSlider.on("slideChange", function () {
+        console.log(workSlider.realIndex);
+
+        historyBtns.forEach((el) => {
+            el.classList.remove("history-nav__btn--active");
+        });
+
+        document
+            .querySelector(
+                `.history-nav__btn[data-index='${workSlider.realIndex}']`
+            )
+            .classList.add("history-nav__btn--active");
+
+        // document
+        //     .querySelector(".history-nav__btn")
+        //     .classList.add("history-nav__btn--active");
+    });
+
+    const historyBtns = document.querySelectorAll(".history-nav__btn");
+
+    historyBtns.forEach((el, idx) => {
+        el.setAttribute("data-index", idx);
+
+        el.addEventListener("click", (e) => {
+            const index = e.currentTarget.dataset.index;
+
+            historyBtns.forEach((el) => {
+                el.classList.remove("history-nav__btn--active");
+            });
+            e.currentTarget.classList.add("history-nav__btn--active");
+
+            workSlider.slideTo(index);
+        });
+    });
 }
