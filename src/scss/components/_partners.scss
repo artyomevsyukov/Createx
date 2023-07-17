@@ -6,9 +6,27 @@
         margin-bottom: 60px;
     }
 
+    &__subtitle {
+        margin: 0;
+        color: var(--gray-700, #787a80);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        gap: 102px;
+        gap: 40px 102px;
+    }
+
+    &--about {
+        background-color: var(--white);
+        padding-top: 120px;
+
+        .partners__title {
+            margin-bottom: 25px;
+        }
     }
 }
