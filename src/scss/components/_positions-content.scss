@@ -1,5 +1,5 @@
 .positions-content {
-    padding: 121px 0;
+    padding: 121px 0 102px;
     &__left {
         grid-column: 7 span;
     }
@@ -7,6 +7,14 @@
         display: flex;
         justify-content: flex-end;
         grid-column: 5 span;
+    }
+
+    .positions-list {
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
     }
 }
 
@@ -29,13 +37,12 @@
     }
     &__city {
         position: relative;
-        margin-right: 30px;
+        margin-right: 20px;
         padding-left: 24px;
         background-image: url("../img/city.svg");
         background-repeat: no-repeat;
         background-position: left center;
         background-size: 16px 16px;
-        margin-right: 24px;
 
         &::after {
             content: "";
@@ -49,7 +56,7 @@
         }
     }
     &__time {
-        padding-left: 24px;
+        padding-left: 25px;
         background-image: url("../img/time.svg");
         background-repeat: no-repeat;
         background-position: left center;
@@ -67,5 +74,45 @@
     }
 
     &__link {
+        padding: 14px 30px;
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+}
+
+.positions-looking {
+    width: 390px;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 25px;
+        color: var(--gray-900, #1e212c);
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 42px */
+    }
+
+    &__desc {
+        margin: 0;
+        margin-bottom: 48px;
+        color: var(--gray-800, #424551);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+    }
+
+    &__btn {
+        &--subs {
+            padding: 15px 43px;
+        }
+        &--send {
+            padding: 15px 52px;
+        }
+        &:not(:last-child) {
+            margin-right: 28px;
+        }
     }
 }
