@@ -46,6 +46,8 @@
 @import "./components/employee-benefits";
 @import "./components/positions-content";
 
+@import "./components/categories";
+
 // подключения компонентов страницы (маленькие компоненты)
 @import "./components/nav";
 @import "./components/header-contacts";
@@ -55,3 +57,4 @@
 @import "./components/breadcrumbs";
 @import "./components/portfolio-item";
 @import "./components/work-images";
+@import "./components/news-article";

@@ -8,6 +8,7 @@
     &__breadcrumbs {
         margin-bottom: 40px;
     }
+
     &__title {
         margin: 0;
         max-width: 600px;
@@ -69,4 +70,14 @@
         background-image: url("../img/positions-hero-bg.png");
         background-position: right -95px top 95px;
     }
+    &--news-bg {
+        background-image: url("../img/news-hero-bg.png");
+        background-position: right -8px top 0px;
+        .page-hero__title {
+            margin-bottom: 24px;
+        }
+    }
 }
+// .page-hero--news-bg .page-hero__title {
+//     margin-bottom: 120px;
+// }
