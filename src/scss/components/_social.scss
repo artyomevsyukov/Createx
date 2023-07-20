@@ -24,4 +24,9 @@
         fill: var(--white);
         opacity: 0.6;
     }
+
+    &__icon--big {
+        fill: var(--gray-700);
+        opacity: 1;
+    }
 }
