@@ -19,4 +19,9 @@
             object-fit: cover;
         }
     }
+
+    &__icon {
+        fill: var(--white);
+        opacity: 0.6;
+    }
 }

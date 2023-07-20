@@ -1,0 +1,83 @@
+.article-meta {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-gray-700);
+
+    &__item {
+        position: relative;
+        color: inherit;
+
+        &:not(:last-child) {
+            margin-right: 21px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -13px;
+                top: 1px;
+                width: 1px;
+                height: 11px;
+                color: var(--color-gray-700);
+                background-color: currentColor;
+            }
+        }
+
+        &--clock {
+            padding-left: 24px;
+            background-image: url("../img/clock.svg");
+            background-position: left center;
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+        }
+        &--comments {
+            padding-left: 24px;
+            background-image: url("../img/comments.svg");
+            background-position: left center;
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &--big {
+        color: var(--gray-700, #787a80);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 25.6px */
+
+        .article-meta__item {
+            position: relative;
+            color: inherit;
+
+            &:not(:last-child) {
+                margin-right: 22px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: -13px;
+                    top: 1px;
+                    width: 1px;
+                    height: 16px;
+                    color: var(--color-gray-700);
+                    background-color: currentColor;
+                }
+            }
+
+            &--clock {
+                padding-left: 28px;
+                background-image: url("../img/clock.svg");
+                background-position: left center;
+                background-size: 20px 20px;
+                background-repeat: no-repeat;
+            }
+
+            &--comments {
+                padding-left: 25px;
+                background-position: left -2px center;
+                background-size: 20px 20px;
+            }
+        }
+    }
+}
