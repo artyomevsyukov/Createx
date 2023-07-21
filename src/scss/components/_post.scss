@@ -32,7 +32,7 @@
         padding-bottom: 60px;
 
         * {
-            // margin-bottom: 28px;
+            margin-bottom: 28px;
             font-size: 16px;
             line-height: 160%;
             color: var(--gray-800);
@@ -127,7 +127,7 @@
                 }
 
                 &:not(:last-child) {
-                    padding-bottom: 4px;
+                    margin-bottom: 4px;
                 }
             }
         }
