@@ -28,5 +28,11 @@
     &__icon--big {
         fill: var(--gray-700);
         opacity: 1;
+
+        .social__item {
+            &:not(:last-child) {
+                margin-right: 13px;
+            }
+        }
     }
 }
