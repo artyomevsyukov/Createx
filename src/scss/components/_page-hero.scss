@@ -111,4 +111,8 @@
             text-transform: initial;
         }
     }
+    &--contacts-bg {
+        background-image: url("../img/contacts-hero-bg.png");
+        background-position: right -9px top 0px;
+    }
 }

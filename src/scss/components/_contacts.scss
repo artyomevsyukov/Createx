@@ -1,0 +1,101 @@
+.contacts {
+    padding-top: 120px;
+
+    &__title {
+        margin: 0px;
+        margin-bottom: 25px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img {
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+}
+
+.form-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    align-items: baseline;
+    max-width: 600px;
+
+    &__field {
+        margin-bottom: 0;
+
+        width: 47.5%;
+    }
+    .form-field__caption {
+        margin-bottom: 9px;
+        color: var(--gray-800, #424551);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 160%; /* 25.6px */
+    }
+    .form-field__input {
+        height: 52px;
+        color: var(--gray-600, #9a9ca5);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 160%; /* 25.6px */
+    }
+
+    .choices {
+        width: 100%;
+    }
+    .choices__inner {
+        margin: 0;
+        padding: 0;
+        padding: 13px 16px;
+        height: 52px;
+
+        border-radius: 4px;
+        border: 1px solid var(--gray-400, #d7dadd);
+        background: var(--gray-200, #f4f5f6);
+    }
+    .choices__placeholder {
+        color: var(--gray-800, #424551);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 25.6px */
+    }
+    .choices[data-type*="select-one"]::after {
+        border: none;
+        right: 19px;
+        margin-top: 0 !important;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 7px;
+        background-image: url("../img/angle-down.svg");
+        // background-position: top -8px right 4px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease-in-out;
+    }
+    .choices[data-type*="select-one"].is-open::after {
+        transform: rotate(180deg) translateY(-50%);
+    }
+
+    .choices__list--single {
+        padding: 0;
+        // display: flex;
+        // align-items: center;
+        // padding-left: 15px;
+        // height: 100%;
+    }
+    .choices__placeholder {
+        opacity: 1;
+    }
+    .choices__list--dropdown .choices__item--selectable.is-highlighted::after,
+    .choices__list[aria-expanded]
+        .choices__item--selectable.is-highlighted::after {
+        display: none;
+    }
+}
