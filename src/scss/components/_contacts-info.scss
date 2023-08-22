@@ -1,5 +1,6 @@
 .contacts-info {
     padding-top: 80px;
+    padding-bottom: 118px;
     background: var(--gray-200, #f4f5f6);
 
     &__desc {
@@ -74,9 +75,26 @@
         line-height: 160%; /* 25.6px */
     }
 
+    &__soc {
+        margin-bottom: 40px;
+    }
+
     &__social {
         justify-content: center;
-        margin-bottom: 120px;
+
+        .social__item:not(:last-child) {
+            margin-right: 24px;
+        }
+
+        .social__link {
+            width: 32px;
+            height: 32px;
+
+            svg {
+                fill: var(--gray-700);
+                opacity: 1;
+            }
+        }
     }
 
     &__item {
