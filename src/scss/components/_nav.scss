@@ -8,10 +8,13 @@
         }
     }
     &__link {
+        @extend %state;
+
         font-weight: 700;
         font-size: 16px;
         line-height: 160%;
         color: var(--color-gray-800);
+        // transition: color 0.3s ease-in-out;
 
         &--current {
             color: var(--color-primary);

@@ -19,3 +19,10 @@
         width: 100%;
     }
 }
+
+.logo {
+    &:focus {
+        outline-offset: 2px;
+        outline: 2px solid var(--primary, #ff5a30);
+    }
+}

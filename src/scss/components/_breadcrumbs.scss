@@ -17,6 +17,7 @@
         }
     }
     &__link {
+        @extend %state;
         color: var(--gray-800, #424551);
         font-size: 14px;
         font-family: Ubuntu;

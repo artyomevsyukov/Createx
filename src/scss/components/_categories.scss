@@ -16,6 +16,8 @@
         width: calc(100% / 6);
     }
     &__btn {
+        @extend %state;
+
         display: flex;
         align-items: center;
         justify-content: center;

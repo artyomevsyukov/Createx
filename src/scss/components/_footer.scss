@@ -111,6 +111,7 @@
 
         a {
             color: inherit;
+            @extend %state-light;
         }
     }
     &__title {
@@ -136,6 +137,7 @@
         }
     }
     &__link {
+        @extend %state-light;
         font-weight: 400;
         font-size: 16px;
         line-height: 160%;

@@ -8,6 +8,7 @@
         0 30px 24px -10px rgba(154, 156, 165, 0.05),
         0 12px 10px -6px rgba(154, 156, 165, 0.04),
         0 4px 4px -4px rgba(30, 33, 44, 0.03);
+    transition: transform 0.3s ease-in-out;
 
     &__content {
         @include flex-colum-center;
@@ -40,5 +41,14 @@
         color: var(--color-primary);
         border: 1px solid currentColor;
         border-radius: 4px;
+    }
+
+    &:focus {
+        outline-offset: 2px;
+        outline: 2px solid var(--primary, #ff5a30);
+    }
+
+    &:hover {
+        transform: translateY(-3px);
     }
 }

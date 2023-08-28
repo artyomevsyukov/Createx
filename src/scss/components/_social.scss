@@ -11,18 +11,30 @@
         display: block;
         width: 24px;
         height: 24px;
-
         svg {
             display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            fill: var(--white);
+            opacity: 0.6;
+            transition: opacity 0.3s ease-in-out;
         }
-    }
 
-    &__icon {
-        fill: var(--white);
-        opacity: 0.6;
+        &:focus {
+            outline-offset: 2px;
+            outline: 2px solid var(--primary, #ff5a30);
+        }
+        &:hover {
+            svg {
+                opacity: 1;
+            }
+        }
+        &:active {
+            svg {
+                opacity: 1;
+            }
+        }
     }
 
     &__icon--big {

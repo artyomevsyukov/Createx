@@ -13,6 +13,7 @@
         font-weight: 400;
         line-height: 150%; /* 27px */
         a {
+            @extend %state;
             color: var(--primary);
             border-bottom: 1px solid currentColor;
         }

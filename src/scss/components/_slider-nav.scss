@@ -20,10 +20,16 @@
             fill: currentColor;
             object-fit: cover;
         }
-
+        &:focus {
+            outline-offset: 2px;
+            outline: 2px solid var(--primary, #ff5a30);
+        }
         &:hover {
             color: var(--color-light);
             background-color: var(--color-primary);
+        }
+        &:active {
+            background-color: var(--active, #fc3300);
         }
     }
 }

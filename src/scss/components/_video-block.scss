@@ -1,73 +1,87 @@
 .video-block {
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
-  height: 500px;
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 3;
-    background-color: var(--color-gray-900);
-    opacity: 0.6;
+    position: relative;
+    overflow: hidden;
     border-radius: 4px;
-  }
-
-  &__content {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__play {
-    @include flex-all-center;
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    border-radius: 100%;
-    background-color: var(--color-primary);
-    width: 80px;
-    height: 80px;
-
-    svg {
-      position: absolute;
-
-      left: 50%;
-      top: 50%;
-      z-index: 10;
-      transform: translate(-50%, -50%);
-      border-radius: 1px;
-      width: 24px;
-      height: 24px;
-
-      fill: #fff;
+    height: 500px;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 3;
+        background-color: var(--color-gray-900);
+        opacity: 0.6;
+        border-radius: 4px;
     }
-  }
 
-  &__muted {
-    @include flex-all-center;
-
-    position: absolute;
-    left: 32px;
-    bottom: 32px;
-    z-index: 10;
-    border-radius: 100%;
-    background-color: var(--color-light);
-    opacity: 0.12;
-    width: 40px;
-    height: 40px;
-
-    svg {
-      width: 20px;
-      height: 20px;
-      fill: #fff;
+    &__content {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-  }
+
+    &__play {
+        @include flex-all-center;
+        @extend %state-btn--fill;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        background-color: var(--color-primary);
+        width: 80px;
+        height: 80px;
+
+        svg {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            z-index: 10;
+            transform: translate(-50%, -50%);
+            border-radius: 1px;
+            width: 24px;
+            height: 24px;
+
+            fill: #fff;
+        }
+    }
+
+    &__muted {
+        @include flex-all-center;
+
+        position: absolute;
+        left: 32px;
+        bottom: 32px;
+        z-index: 10;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(#fff, 0.12);
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        svg {
+            z-index: 999;
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+
+        &:focus {
+            outline: 2px solid var(--primary, #ff5a30);
+            outline-offset: 2px;
+        }
+        &:hover {
+            background-color: rgba(#fff, 0.4);
+        }
+        &:active {
+            background-color: rgba(#fff, 0.5);
+            outline: none;
+        }
+    }
 }

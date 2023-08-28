@@ -3,6 +3,10 @@
     padding-bottom: 118px;
     background: var(--gray-200, #f4f5f6);
 
+    a {
+        @extend %state-primary;
+    }
+
     &__desc {
         margin-bottom: 62px;
     }
@@ -92,7 +96,7 @@
 
             svg {
                 fill: var(--gray-700);
-                opacity: 1;
+                opacity: 0.8;
             }
         }
     }

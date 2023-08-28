@@ -81,11 +81,15 @@
         line-height: 160%; /* 25.6px */
     }
     &__fields {
+        // border: none;
+        // padding: 0;
+        // width: 47.5%;
         border: none;
         padding: 0;
+        padding-left: 2px;
         width: 47.5%;
         .form-field__caption {
-            padding-left: 2px;
+            // padding-left: 2px;
             margin-bottom: 21px;
         }
     }
@@ -98,6 +102,11 @@
 
     .choices {
         width: 100%;
+    }
+
+    .is-focused {
+        outline-offset: 2px;
+        outline: 2px solid var(--primary, #ff5a30);
     }
     .choices__inner {
         margin: 0;
