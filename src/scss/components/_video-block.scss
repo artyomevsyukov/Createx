@@ -60,6 +60,7 @@
         bottom: 32px;
         z-index: 10;
         border-radius: 100%;
+<<<<<<< HEAD
         width: 40px;
         height: 40px;
         background-color: rgba(#fff, 0.12);
@@ -82,6 +83,17 @@
         &:active {
             background-color: rgba(#fff, 0.5);
             outline: none;
+=======
+        background-color: var(--color-light);
+        opacity: 0.12;
+        width: 40px;
+        height: 40px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            // fill: #fff;
+>>>>>>> 9b6430db7813d523bf349a3814cef06e94729d02
         }
     }
 }
