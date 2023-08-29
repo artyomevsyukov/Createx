@@ -12,6 +12,69 @@
         color: var(--active, #fc3300);
     }
 }
+
+%state-btn--fill {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:focus {
+        outline: 2px solid var(--primary, #ff5a30);
+        outline-offset: 2px;
+    }
+    &:hover {
+        background-color: var(--active, #fc3300);
+    }
+    &:active {
+        background-color: var(--active, #fc3300);
+    }
+}
+%state-btn--stroke-light {
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:focus {
+        outline: 2px solid var(--primary, #ff5a30);
+        outline-offset: 2px;
+    }
+    &:hover {
+        background-color: var(--primary, #ff5a30);
+        border-color: var(--primary, #ff5a30);
+    }
+    &:active {
+        background-color: var(--primary, #ff5a30);
+        border-color: var(--primary, #ff5a30);
+    }
+}
+
+%state-btn--stroke-primary {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+
+    &:focus {
+        outline: 2px solid var(--primary, #ff5a30);
+        outline-offset: 2px;
+    }
+    &:hover {
+        background-color: var(--primary, #ff5a30);
+        color: var(--white);
+    }
+    &:active {
+        background-color: var(--primary, #ff5a30);
+        color: var(--white);
+    }
+}
+%state {
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+        outline-offset: 2px;
+        outline: 2px solid var(--primary, #ff5a30);
+    }
+    &:hover {
+        color: var(--active, #fc3300);
+    }
+    &:active {
+        color: var(--active, #fc3300);
+    }
+}
 %state-primary {
     transition: color 0.3s ease-in-out;
 
