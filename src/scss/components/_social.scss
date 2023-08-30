@@ -8,6 +8,8 @@
         }
     }
     &__link {
+        @extend %state-btn-icon;
+
         display: block;
         width: 24px;
         height: 24px;
@@ -18,29 +20,16 @@
             object-fit: cover;
             fill: var(--white);
             opacity: 0.6;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        &:focus {
-            outline-offset: 2px;
-            outline: 2px solid var(--primary, #ff5a30);
-        }
-        &:hover {
-            svg {
-                opacity: 1;
-            }
-        }
-        &:active {
-            svg {
-                opacity: 1;
-            }
         }
     }
 
     &__icon--big {
-        fill: var(--gray-700);
-        opacity: 1;
+        svg {
+            @extend %state-btn-icon;
 
+            fill: var(--gray-700);
+            opacity: 0.7;
+        }
         .social__item {
             &:not(:last-child) {
                 margin-right: 13px;

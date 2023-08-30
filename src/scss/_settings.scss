@@ -181,7 +181,7 @@ a {
         }
 
         &-primary {
-            // @extend %state-btn--stroke;
+            @extend %state-btn--stroke-primary;
 
             color: var(--color-primary);
 

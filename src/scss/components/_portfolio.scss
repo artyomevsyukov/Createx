@@ -79,6 +79,8 @@
 }
 
 .portfolio-more {
+    @extend %state;
+
     margin-top: 60px;
     display: inline-flex;
     align-items: center;
@@ -95,5 +97,15 @@
         color: inherit;
         fill: currentColor;
         object-fit: cover;
+    }
+}
+
+.portfolio-tabs-nav__btn {
+    @extend %state-focus;
+
+    &:hover {
+        .portfolio-tabs-nav__text {
+            color: var(--gray-900, #1e212c);
+        }
     }
 }

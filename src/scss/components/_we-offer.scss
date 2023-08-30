@@ -32,6 +32,8 @@
             margin-bottom: 10px;
         }
         .accordion__control {
+            @extend %state-focus;
+
             position: relative;
             text-align: left;
             padding-right: 20px;

@@ -44,6 +44,8 @@
         line-height: 163%; /* 25.6px */
 
         a {
+            @extend %state;
+
             font-weight: 700;
             color: var(--primary);
         }
@@ -59,6 +61,8 @@
     }
 
     &__reply {
+        @extend %state;
+
         display: inline-flex;
         color: var(--gray-700, #787a80);
         font-size: 14px;
