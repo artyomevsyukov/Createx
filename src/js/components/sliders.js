@@ -222,3 +222,30 @@ if (historySlider) {
         });
     });
 }
+
+// heroSlider
+
+const heroSlider = new Swiper(".hero-slider", {
+    slidesPerView: 1,
+    // loop: true,
+    on: {
+        init: function () {
+            const paginationBullets = document.querySelectorAll(
+                ".hero__pag .swiper-pagination-bullet"
+            );
+
+            paginationBullets.forEach((el) => {
+                el.innerHTML = `<span clas="hero__bar"></span>`;
+            });
+        },
+    },
+    navigation: {
+        nextEl: ".hero-slider__next",
+        prevEl: ".hero-slider__prev",
+    },
+    pagination: {
+        el: ".hero__pag",
+        type: "bullets",
+        clickable: true,
+    },
+});

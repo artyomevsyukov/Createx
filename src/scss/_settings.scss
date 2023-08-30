@@ -8,15 +8,6 @@ html {
     box-sizing: inherit;
 }
 
-// *:has(%state) {
-//     transition: color 0.3s ease-in-out;
-// }
-
-// *:has(%state) {
-//     transition: color 2s ease-in-out !important;
-//     // color: blue !important;
-// }
-
 body {
     margin: 0;
     font-family: var(--font-family, sans-serif);

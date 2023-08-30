@@ -1,22 +1,89 @@
 .hero {
-  color: var(--color-light);
-  background-image: url("../img/hero-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: var(--color-gray-800);
-
-  &__content {
-    padding-top: 220px;
-    padding-bottom: 354px;
-    max-width: 590px;
-  }
-
-  &__btns {
-    .btn {
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
+    &__content {
+        padding-top: 220px;
+        padding-bottom: 354px;
+        max-width: 590px;
     }
-  }
+
+    &__btns {
+        .btn {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+    &__pag {
+        counter-reset: pag;
+        .swiper-pagination-bullet {
+            display: flex;
+            flex-direction: column;
+            border-radius: 0;
+            width: 178px;
+            height: auto;
+            text-align: left;
+            background-color: transparent;
+            // background-color: red;
+            opacity: 1;
+
+            &::before {
+                counter-increment: pag;
+                content: "0" counter(pag);
+                // color: var(--white, #fff);
+                // font-family: Ubuntu;
+                // font-size: 28px;
+                // font-style: normal;
+                // font-weight: 700;
+                // line-height: 150%; /* 42px */
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__bar {
+        // display: block;
+        width: 178px;
+        height: 2px;
+        // background-color: rgba(#fff, 0.3);
+        background-color: var(--white);
+    }
+}
+.hero__bar {
+    // display: block;
+    width: auto;
+    height: 2px;
+    // background-color: rgba(#fff, 0.3);
+    background-color: var(--white);
+}
+.hero-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &__prev {
+        position: absolute;
+        left: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--white);
+        z-index: 50;
+    }
+    &__next {
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--white);
+        z-index: 50;
+    }
+}
+
+.hero-slide {
+    color: var(--color-light);
+    background-image: url("../img/hero-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-gray-800);
 }
