@@ -224,20 +224,17 @@ if (historySlider) {
 }
 
 // heroSlider
+const heroSliderSpeed = 1500;
+
+const fooBar = bodyStyles.getPropertyValue("--hero-slider-speed"); //get
+document.body.style.setProperty("--hero-slider-speed", heroSliderSpeed + "ms"); //set
 
 const heroSlider = new Swiper(".hero-slider", {
     slidesPerView: 1,
     // loop: true,
-    on: {
-        init: function () {
-            const paginationBullets = document.querySelectorAll(
-                ".hero__pag .swiper-pagination-bullet"
-            );
-
-            paginationBullets.forEach((el) => {
-                el.innerHTML = `<span clas="hero__bar"></span>`;
-            });
-        },
+    speed: heroSliderSpeed,
+    autoplay: {
+        delay: 1000,
     },
     navigation: {
         nextEl: ".hero-slider__next",
@@ -247,5 +244,16 @@ const heroSlider = new Swiper(".hero-slider", {
         el: ".hero__pag",
         type: "bullets",
         clickable: true,
+    },
+    on: {
+        init: function () {
+            const paginationBullets = document.querySelectorAll(
+                ".hero__pag .swiper-pagination-bullet"
+            );
+
+            paginationBullets.forEach((el) => {
+                el.innerHTML = '<span class ="hero__bar"></span>';
+            });
+        },
     },
 });
