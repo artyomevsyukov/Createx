@@ -8,7 +8,7 @@
         0 30px 24px -10px rgba(154, 156, 165, 0.05),
         0 12px 10px -6px rgba(154, 156, 165, 0.04),
         0 4px 4px -4px rgba(30, 33, 44, 0.03);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
 
     &__content {
         @include flex-colum-center;
@@ -30,7 +30,8 @@
         color: var(--color-gray-700);
     }
     &__btn {
-        display: none;
+        // display: none;
+        margin-bottom: -68px;
         margin-top: 24px;
         padding: 13px 31px;
         font-weight: 700;
@@ -49,6 +50,15 @@
     }
 
     &:hover {
-        transform: translateY(-3px);
+        // transform: translateY(-3px);
+        // transform: translateY(-3px);
+
+        .portfolio-item__img {
+            height: 277px;
+        }
+
+        .portfolio-item__btn {
+            margin-bottom: 0;
+        }
     }
 }

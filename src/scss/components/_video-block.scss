@@ -14,6 +14,14 @@
         background-color: var(--color-gray-900);
         opacity: 0.6;
         border-radius: 4px;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    &--played {
+        &::before {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     &__content {
@@ -36,6 +44,7 @@
         background-color: var(--color-primary);
         width: 80px;
         height: 80px;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
         svg {
             position: absolute;
@@ -49,6 +58,11 @@
             height: 24px;
 
             fill: #fff;
+        }
+
+        &--played {
+            opacity: 0;
+            visibility: hidden;
         }
     }
 
