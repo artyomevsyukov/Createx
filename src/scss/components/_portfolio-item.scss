@@ -51,10 +51,10 @@
 
     &:hover {
         // transform: translateY(-3px);
-        // transform: translateY(-3px);
 
         .portfolio-item__img {
             height: 277px;
+            object-fit: fill;
         }
 
         .portfolio-item__btn {
