@@ -342,6 +342,9 @@ a {
     bottom: 80px;
     display: flex;
     align-items: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
     &__text {
         margin-right: 16px;
@@ -362,11 +365,20 @@ a {
         height: 40px;
         background-color: var(--primary, #ff5a30);
         transition: background-color 0.3s ease-in-out;
+
         svg {
             width: 24px;
             height: 24px;
             fill: var(--white);
             object-fit: cover;
         }
+
+        &:hover {
+            background-color: var(--color-active);
+        }
+    }
+    &--active {
+        opacity: 1;
+        visibility: visible;
     }
 }
