@@ -1,14 +1,20 @@
 const scroll = new SmoothScroll(".to-top");
 const toTop = document.querySelector(".to-top");
-const heroHeight = document.querySelector(".hero").offsetHeight;
+let heroHeight;
+
+if (document.querySelector(".hero")) {
+    heroHeight = document.querySelector(".hero").offsetHeight;
+}
+
+if (document.querySelector(".page-hero")) {
+    heroHeight = document.querySelector(".page-hero").offsetHeight;
+}
 
 const isVisibleToTop = (y = 0) => {
     if (y >= heroHeight) {
         toTop.classList.add("to-top--active");
-        console.log("added to-top--active");
     } else {
         toTop.classList.remove("to-top--active");
-        console.log("remove");
     }
 };
 
