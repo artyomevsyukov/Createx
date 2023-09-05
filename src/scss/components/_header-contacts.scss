@@ -31,6 +31,10 @@
         display: flex;
         align-items: center;
         color: var(--color-gray-900);
+
+        @include minidesk {
+            font-size: 16px;
+        }
     }
 
     &--call {
