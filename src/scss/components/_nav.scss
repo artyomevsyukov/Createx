@@ -6,6 +6,11 @@
         &:not(:last-child) {
             margin-right: 40px;
         }
+        @include minidesk {
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
     }
     &__link {
         @extend %state;

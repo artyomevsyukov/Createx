@@ -27,7 +27,7 @@ if (portfolioTabsNav) {
             });
         }
     };
-
+    // todo
     portfolioTabsNav.addEventListener("click", (e) => {
         const target = e.target;
 
@@ -73,6 +73,10 @@ if (portfolioTabsNav) {
             }
         }
     });
+    // todo
+    // optimize
+    // me: ssdgsdfgfgdfgfdgsdfgfdsgdfgfdgdfgdfgdfgdfgdfsgdfg
+    // TODO: sfsdfsdfsfsdfsdffasfsdfsf
 
     hideMoreItems(portfolioTabsItems);
     isLoadMoreNeeded(portfolioTabsItemsVisible);
@@ -103,7 +107,7 @@ if (portfolioTabsNav) {
         }
     });
 }
-
+// todo @critical
 const selects = document.querySelectorAll(".form-field__select");
 selects.forEach((el) => {
     new Choices(el, {
