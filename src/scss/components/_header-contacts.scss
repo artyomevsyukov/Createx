@@ -6,6 +6,9 @@
             margin-right: 35px;
         }
     }
+    @include tablet {
+        display: none;
+    }
 }
 
 .contacts-link {

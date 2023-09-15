@@ -14,6 +14,19 @@
         &:first-child {
             grid-column: 7 span;
             grid-row: 2 span;
+
+            @include tablet {
+                grid-column: 12 span;
+                grid-row: 3 span;
+            }
+            @include minitablet {
+                grid-column: 12 span;
+                grid-row: 2 span;
+            }
+        }
+
+        @include tablet {
+            grid-column: 12 span;
         }
     }
 }

@@ -19,6 +19,19 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 40px 102px;
+
+        @include minidesk {
+            grid-column: 2fr;
+            gap: 30px 102px;
+        }
+    }
+
+    &__item {
+        @include minidesk {
+            grid-column: 2 span;
+            display: flex;
+            justify-content: center;
+        }
     }
     &__link {
         &:focus {

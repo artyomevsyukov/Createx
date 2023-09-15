@@ -7,6 +7,13 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: calc(var(--mission-gap) * 2);
+
+        @include tablet {
+            --mission-gap: 30px;
+        }
+        @include minitablet {
+            --mission-gap: 10px;
+        }
     }
     &__item {
         position: relative;
@@ -80,7 +87,28 @@
         // @include flex-v-center;
         display: flex;
         align-items: flex-end;
+
+        @include tablet {
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            & > * {
+                margin-right: 0 !important;
+                width: 49%;
+                margin-bottom: 20px;
+                flex-grow: initial;
+
+                .form-field__input {
+                    width: 100%;
+                }
+            }
+        }
     }
+
+    @include minitablet {
+        top: 0;
+    }
+
     &__field {
         margin-right: 24px;
     }

@@ -1,5 +1,5 @@
 .news-article {
-    overflow: hidden;
+    // overflow: hidden;
     height: 100%;
     border-radius: 4px;
     background: var(--color-light);
@@ -21,6 +21,13 @@
         font-style: normal;
         font-weight: 700;
         line-height: 150%; /* 30px */
+    }
+
+    &__img {
+        @include tablet {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     &__meta {
