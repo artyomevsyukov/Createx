@@ -6,6 +6,11 @@
     padding-bottom: 100px;
     // background-color: var(--color-light);
 
+    @include minitablet {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -25,10 +30,26 @@
         gap: 48px;
         max-width: 736px;
         margin: 0 auto;
+
+        @include tablet {
+            gap: 35px;
+            justify-items: center;
+        }
+        @include minitablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &__title {
         margin-bottom: 62px;
+
+        @include minitablet {
+            margin: 0 auto;
+            margin-bottom: 62px;
+        }
     }
 }
 

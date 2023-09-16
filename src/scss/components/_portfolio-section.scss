@@ -7,6 +7,16 @@
         align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 48px;
+        @include mobile {
+            display: block;
+        }
+    }
+    &__slilder-nav {
+        transform: translateX(12px);
+
+        @include mobile {
+            transform: none;
+        }
     }
 
     &__title {
@@ -15,8 +25,15 @@
         max-width: 710px;
 
         @include tablet {
+            margin-bottom: 15px;
+            padding-bottom: 0;
             font-size: 35px;
             line-height: 50px;
+        }
+        @include mobile {
+            max-width: none;
+            font-size: 28px;
+            line-height: 40px;
         }
     }
     &__items {
@@ -39,5 +56,9 @@
 
     &__learn {
         margin-top: 80px;
+    }
+
+    @include mobile {
+        padding: 40px 0;
     }
 }

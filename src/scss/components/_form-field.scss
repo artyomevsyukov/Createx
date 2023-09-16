@@ -32,6 +32,10 @@
             height: 66px;
             resize: none;
             padding-top: 10px;
+
+            @include mobile {
+                height: 122px;
+            }
         }
     }
     &--big {

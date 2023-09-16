@@ -7,6 +7,10 @@
     &__list {
         margin-bottom: 80px;
         grid-template-rows: repeat(2, 255px);
+
+        @include tablet {
+            grid-template-rows: initial;
+        }
     }
     &__item {
         grid-column: 5 span;
@@ -17,16 +21,27 @@
 
             @include tablet {
                 grid-column: 12 span;
-                grid-row: 3 span;
+                // grid-row: 3 span;
             }
             @include minitablet {
                 grid-column: 12 span;
-                grid-row: 2 span;
+                // grid-row: 2 span;
+            }
+            @include mobile {
+                grid-column: 4 span;
+                // grid-row: 2 span;
             }
         }
 
         @include tablet {
             grid-column: 12 span;
         }
+        @include mobile {
+            grid-column: 4 span;
+            // grid-row: auto;
+        }
+    }
+    @include mobile {
+        padding: 60px 0 60px;
     }
 }

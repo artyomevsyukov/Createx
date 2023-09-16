@@ -10,6 +10,10 @@
 
     &__text {
         padding: 20px 24px 19px;
+
+        @include mobile {
+            padding: 20px 0 19px;
+        }
     }
 
     &__title {
@@ -47,6 +51,8 @@
         font-size: 16px;
         line-height: 160%;
         color: var(--color-gray-800);
+        max-height: 100px;
+        overflow: hidden;
     }
 
     &--small {
@@ -55,6 +61,10 @@
         }
         .news-article__text {
             padding: 13px 24px;
+
+            @include mobile {
+                padding: 20px 0 19px;
+            }
         }
         .news-article__title {
             margin-bottom: 9px;

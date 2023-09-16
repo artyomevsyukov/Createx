@@ -31,7 +31,7 @@
     }
     &__btn {
         // display: none;
-        margin-bottom: -68px;
+        margin-bottom: -78px;
         margin-top: 24px;
         padding: 13px 31px;
         font-weight: 700;
@@ -42,6 +42,10 @@
         color: var(--color-primary);
         border: 1px solid currentColor;
         border-radius: 4px;
+
+        @include minitablet {
+            margin-bottom: 0px;
+        }
     }
 
     &:focus {

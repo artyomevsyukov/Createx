@@ -2,11 +2,20 @@
     padding-top: 115px;
     background-color: var(--color-gray-200);
 
+    @include minitablet {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     &__content {
         max-width: 612px;
 
         @include tablet {
             max-width: 400px;
+        }
+        @include mobile {
+            width: 100%;
+            max-width: none;
         }
     }
     &__img {
@@ -20,6 +29,9 @@
         }
         @include tablet {
             width: 325px;
+        }
+        @include minitablet {
+            display: none;
         }
     }
     &__title {

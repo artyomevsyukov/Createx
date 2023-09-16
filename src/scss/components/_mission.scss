@@ -14,6 +14,9 @@
         @include minitablet {
             --mission-gap: 10px;
         }
+        @include mobile {
+            display: block;
+        }
     }
     &__item {
         position: relative;
@@ -32,6 +35,11 @@
                 width: 1px;
                 height: 100%;
                 background-image: url("../img/divider.svg");
+            }
+        }
+        &:not(:last-child) {
+            @include mobile {
+                margin-bottom: 30px;
             }
         }
     }
@@ -101,7 +109,17 @@
                 .form-field__input {
                     width: 100%;
                 }
+
+                @include mobile {
+                    width: 100%;
+                }
             }
+        }
+        @include mobile {
+            display: block;
+        }
+        .form-field__input {
+            width: 100%;
         }
     }
 
@@ -114,5 +132,9 @@
     }
     &__btn {
         padding: 12px 29px;
+    }
+
+    @include mobile {
+        padding: 20px 10px;
     }
 }

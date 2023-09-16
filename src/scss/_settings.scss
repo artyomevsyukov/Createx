@@ -135,6 +135,11 @@ a {
         font-size: 60px;
         line-height: 75px;
     }
+
+    @include mobile {
+        font-size: 35px;
+        line-height: 45px;
+    }
 }
 .main-desc {
     margin: 0;
@@ -146,6 +151,10 @@ a {
     &--home {
         margin-bottom: 60px;
         color: var(--color-light);
+    }
+    @include mobile {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
@@ -183,6 +192,14 @@ a {
             border-color: var(--color-primary);
         }
     }
+
+    // @include mobile {
+    //     text-align: center;
+    //     width: 150px;
+    //     padding: 0;
+    //     font-size: 14px;
+    //     line-height: 55px;
+    // }
 }
 
 .title {
@@ -196,6 +213,10 @@ a {
     &--center {
         text-align: center;
     }
+    @include mobile {
+        font-size: 28px;
+        line-height: 42px;
+    }
 }
 .desc {
     margin: 0;
@@ -208,6 +229,11 @@ a {
     &--center {
         text-align: center;
     }
+    @include mobile {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 40px;
+    }
 }
 
 .section-offset {
@@ -216,12 +242,19 @@ a {
     @include minitablet {
         padding-top: 60px;
     }
+    @include mobile {
+        padding-top: 40px;
+    }
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid-gap);
+
+    @include mobile {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 .custom-checkbox {
     &__input {

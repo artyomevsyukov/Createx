@@ -5,20 +5,38 @@
 
     &__left {
         grid-column: 7 span;
+
+        @include minitablet {
+            grid-column: 12 span;
+        }
+        @include mobile {
+            grid-column: 4 span;
+        }
     }
     &__logo {
         margin-right: 60px;
+
+        @include mobile {
+            display: inline-block;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
     }
 
     &__top {
         @include flex-v-center;
+
         margin-bottom: 22px;
+
+        @include mobile {
+            display: block;
+        }
     }
 
     &__desc {
-        max-width: 493px;
         margin: 0;
         width: 100%;
+        max-width: 493px;
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
@@ -27,13 +45,27 @@
     }
     &__form {
         grid-column: 5 span;
+
+        @include minitablet {
+            grid-column: 12 span;
+        }
+
+        @include mobile {
+            grid-column: 4 span;
+        }
     }
+
     &__address {
         grid-column: 4 span;
     }
     &__nav {
         grid-column: 8 span;
+
+        @include mobile {
+            grid-column: 4 span;
+        }
     }
+
     &__copyright {
         grid-column: 12 span;
 
@@ -41,6 +73,18 @@
         font-size: 12px;
         line-height: 150%;
         color: var(--color-light);
+
+        span {
+            padding-left: 22px;
+            background-image: url("../img/heart.svg");
+            background-position: 2px center;
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+        }
+
+        @include mobile {
+            grid-column: 4 span;
+        }
     }
 }
 
@@ -60,6 +104,10 @@
     .form-field {
         margin: 0;
         width: 364px;
+
+        @include mobile {
+            width: 150px;
+        }
     }
     .form-field__input {
         background-color: rgba(255, 255, 255, 0.12);
@@ -126,9 +174,21 @@
     display: flex;
     padding-top: 20px;
     padding-left: 54px;
+
+    @include minitablet {
+        padding-left: 30px;
+    }
     &__col {
         &:not(:last-child) {
             margin-right: 125px;
+
+            @include minitablet {
+                margin-right: 65px;
+            }
+
+            @include mobile {
+                margin-right: 35px;
+            }
         }
     }
     &__item {
@@ -143,14 +203,22 @@
         line-height: 160%;
         color: inherit;
     }
-}
-.footer__copyright {
-    span {
-        padding-left: 22px;
-        background-image: url("../img/heart.svg");
-        background-repeat: no-repeat;
-        // background-position: left center;
-        background-position: 2px center;
-        background-size: 16px 16px;
+
+    @include minitablet {
+        padding-left: 24px;
+    }
+
+    @include mobile {
+        padding-left: 0;
     }
 }
+// .footer__copyright {
+//     span {
+//         padding-left: 22px;
+//         background-image: url("../img/heart.svg");
+//         background-repeat: no-repeat;
+//         // background-position: left center;
+//         background-position: 2px center;
+//         background-size: 16px 16px;
+//     }
+// }
