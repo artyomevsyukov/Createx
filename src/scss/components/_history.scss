@@ -12,6 +12,12 @@
         transform: translate(-1px, 6px);
     }
 
+    &__content {
+        @include minitablet {
+            display: block;
+        }
+    }
+
     &__item {
         overflow: hidden;
         grid-column: 8 span;
@@ -89,5 +95,17 @@
             height: 8px;
             background-color: currentColor;
         }
+        @include tablet {
+            padding-left: 30px;
+            font-size: 22px;
+        }
+
+        @include minitablet {
+            padding-left: 20px;
+            // font-size: 18px;
+        }
+    }
+    @include minitablet {
+        margin-bottom: 30px;
     }
 }

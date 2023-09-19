@@ -5,4 +5,8 @@
     &__title {
         margin-bottom: 60px;
     }
+
+    @include minidesk {
+        display: none;
+    }
 }

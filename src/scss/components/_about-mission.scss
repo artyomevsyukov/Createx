@@ -8,6 +8,16 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: calc(var(--mission-gap) * 2);
+
+        @include tablet {
+            --mission-gap: 30px;
+        }
+        @include minitablet {
+            --mission-gap: 10px;
+        }
+        @include mobile {
+            display: block;
+        }
     }
     &__item {
         position: relative;
@@ -26,6 +36,11 @@
                 width: 1px;
                 height: 100%;
                 background-image: url("../img/divider.svg");
+            }
+        }
+        @include mobile {
+            &:not(:last-child) {
+                margin-bottom: 30px;
             }
         }
     }
@@ -53,5 +68,13 @@
     }
     &__item--comfort {
         background-image: url("../img/comfort.svg");
+    }
+    @include minitablet {
+        padding: 30px 20px;
+        top: 0;
+    }
+
+    @include mobile {
+        padding: 20px 10px;
     }
 }

@@ -18,6 +18,16 @@
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 122px;
         gap: calc(var(--contacts-gap) * 2);
+
+        @include minidesk {
+            --contacts-gap: 80px;
+        }
+        @include tablet {
+            --contacts-gap: 40px;
+        }
+        @include minitablet {
+            display: block;
+        }
     }
 
     &__subtitle {
@@ -114,6 +124,9 @@
                 width: 1px;
                 height: 100%;
                 background-image: url("../img/divider2.svg");
+            }
+            @include minitablet {
+                margin-bottom: 30px;
             }
         }
     }

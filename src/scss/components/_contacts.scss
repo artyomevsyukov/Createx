@@ -10,11 +10,20 @@
     &__content {
         display: flex;
         justify-content: space-between;
+
+        @include tablet {
+            display: block;
+        }
     }
 
     &__img {
         flex-shrink: 0;
         margin-right: 20px;
+        @include tablet {
+            text-align: center;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -26,6 +35,11 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+
+        @include mobile {
+            display: block;
+            margin-bottom: 0px;
+        }
     }
     &__field {
         margin-bottom: 0;
@@ -34,6 +48,11 @@
         &--big {
             width: 100%;
         }
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 24px;
+        }
     }
 
     &__bottom {
@@ -41,6 +60,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__checkbox {
@@ -48,22 +71,19 @@
 
         .custom-checkbox__text {
             color: var(--gray-800, #424551);
-
-            /* base/regular */
             font-family: Ubuntu;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: 160%; /* 25.6px */
         }
-        // .custom-checkbox__text::before {
-        //     left: 0px;
-        //     top: -1px;
-        // }
-        // .custom-checkbox__text::after {
-        //     left: 0px;
-        //     top: -1px;
-        // }
+        @include mobile {
+            margin-bottom: 30px;
+        }
+    }
+    .form-field__flex {
+        display: flex;
+        margin-bottom: 30px;
     }
 
     .form-field__caption {
@@ -79,17 +99,16 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 160%; /* 25.6px */
+        @include mobile {
+            width: 100%;
+        }
     }
     &__fields {
-        // border: none;
-        // padding: 0;
-        // width: 47.5%;
         border: none;
         padding: 0;
         padding-left: 2px;
         width: 47.5%;
         .form-field__caption {
-            // padding-left: 2px;
             margin-bottom: 21px;
         }
     }
@@ -169,11 +188,6 @@
     }
 
     .choices__list--single {
-        // padding: 0;
-        // display: flex;
-        // align-items: center;
-        // padding-left: 15px;
-        // height: 100%;
     }
     .choices__placeholder {
         opacity: 1;
@@ -182,6 +196,10 @@
     .choices__list[aria-expanded]
         .choices__item--selectable.is-highlighted::after {
         display: none;
+    }
+
+    @include tablet {
+        width: auto;
     }
 }
 

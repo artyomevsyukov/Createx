@@ -5,6 +5,10 @@
     &__title {
         margin-bottom: 39px;
     }
+
+    @include tablet {
+        padding-bottom: 80px;
+    }
 }
 
 .categories-nav {
@@ -14,6 +18,12 @@
 
     &__item {
         width: calc(100% / 6);
+        @include tablet {
+            width: calc(100% / 3);
+        }
+        @include mobile {
+            width: 100%;
+        }
     }
     &__btn {
         @extend %state;
@@ -37,6 +47,9 @@
             color: var(--primary, #ff5a30);
             border-color: currentColor;
         }
+    }
+    @include tablet {
+        flex-wrap: wrap;
     }
 }
 

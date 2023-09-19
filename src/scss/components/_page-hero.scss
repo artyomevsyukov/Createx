@@ -31,6 +31,10 @@
         &-mb {
             margin-bottom: 60px;
         }
+
+        @include mobile {
+            font-size: 46px;
+        }
     }
 
     &__desc {
@@ -40,6 +44,10 @@
         font-family: Ubuntu;
         line-height: 150%;
         color: var(--gray-700, #787a80);
+
+        @include mobile {
+            font-size: 16px;
+        }
     }
 
     &__bottom {
@@ -114,5 +122,10 @@
     &--contacts-bg {
         background-image: url("../img/contacts-hero-bg.png");
         background-position: right -9px top 0px;
+    }
+
+    @include tablet {
+        background-image: none;
+        min-height: auto;
     }
 }
