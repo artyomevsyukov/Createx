@@ -2,11 +2,20 @@
     padding: 121px 0 102px;
     &__left {
         grid-column: 7 span;
+        @include tablet {
+            grid-column: 12 span;
+            margin-bottom: 30px;
+        }
     }
     &__right {
         display: flex;
         justify-content: flex-end;
         grid-column: 5 span;
+
+        @include tablet {
+            grid-column: 12 span;
+            justify-content: center;
+        }
     }
 
     .positions-list {
@@ -15,6 +24,20 @@
                 margin-bottom: 24px;
             }
         }
+
+        @include tablet {
+            --mission-gap: 30px;
+        }
+        @include minitablet {
+            --mission-gap: 10px;
+        }
+        @include mobile {
+            display: block;
+        }
+    }
+
+    @include mobile {
+        padding: 80px 0 20px;
     }
 }
 
@@ -71,6 +94,10 @@
         font-style: normal;
         font-weight: 700;
         line-height: 150%; /* 30px */
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
     }
 
     &__link {
@@ -78,6 +105,11 @@
         display: inline-block;
         font-size: 14px;
         letter-spacing: 0.5px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
@@ -114,5 +146,17 @@
         &:not(:last-child) {
             margin-right: 28px;
         }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include tablet {
+        width: auto;
+        max-width: 600px;
     }
 }

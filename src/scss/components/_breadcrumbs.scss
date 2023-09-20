@@ -1,5 +1,7 @@
 .breadcrumbs {
     @include flex-v-center;
+    flex-wrap: wrap;
+    gap: 10px 0;
 
     &__item {
         position: relative;
@@ -29,4 +31,8 @@
     // &__link:last-child {
     //     color: var(--gray-600, #9a9ca5);
     // }
+
+    @include mobile {
+        // display: block;
+    }
 }

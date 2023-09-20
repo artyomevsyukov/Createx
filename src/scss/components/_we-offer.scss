@@ -6,15 +6,23 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: var(--grid-gap);
+
+        @include tablet {
+            display: block;
+        }
     }
 
     &__img {
         grid-column: 7 span;
+        margin-bottom: 30px;
     }
 
     &__content {
         grid-column: 5 span;
         padding-left: 67px;
+        @include tablet {
+            padding-left: 15px;
+        }
     }
 
     &__title {

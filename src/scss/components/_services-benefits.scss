@@ -11,6 +11,16 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: calc(var(--mission-gap) * 2);
+
+        @include tablet {
+            --mission-gap: 30px;
+        }
+        @include minitablet {
+            --mission-gap: 10px;
+        }
+        @include mobile {
+            display: block;
+        }
     }
     &__item {
         position: relative;
@@ -29,6 +39,10 @@
                 width: 1px;
                 height: 100%;
                 background-image: url("../img/divider.svg");
+
+                @include mobile {
+                    margin-bottom: 30px;
+                }
             }
         }
     }
@@ -73,5 +87,8 @@
         // line-height: 52px;
         // letter-spacing: 0.5px;
         text-transform: uppercase;
+        @include mobile {
+            width: auto;
+        }
     }
 }
