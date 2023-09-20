@@ -30,6 +30,10 @@
             .services__info {
                 padding-left: 0;
                 order: -1;
+                @include tablet {
+                    order: initial;
+                    padding-left: 40px;
+                }
             }
 
             .services__img {

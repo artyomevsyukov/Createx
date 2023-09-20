@@ -23,7 +23,9 @@
         color: var(--color-gray-900);
 
         @include minidesk {
+            height: 54px;
             font-size: 18px;
+            text-align: center;
         }
     }
     &__desc {

@@ -4,17 +4,31 @@
 
     background: var(--gray-200, #f4f5f6);
 
+    .grid {
+        @include tablet {
+            display: block;
+        }
+    }
+
     &__left {
         grid-column: 5 span;
 
         img {
             margin-bottom: -144px;
             border-radius: 4px;
+
+            @include tablet {
+                margin-bottom: 20px;
+            }
         }
     }
     &__right {
         padding-left: 104px;
         grid-column: 7 span;
+
+        @include tablet {
+            padding-left: 0px;
+        }
     }
     &__title {
         margin-bottom: 60px;

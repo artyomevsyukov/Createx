@@ -81,7 +81,7 @@ if (portSlider) {
 
 if (relatedSlider) {
     const relatedProjSlider = new Swiper(relatedSlider, {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: gap,
         on: {
             init: function () {
@@ -101,6 +101,14 @@ if (relatedSlider) {
         navigation: {
             nextEl: ".related-projects__next",
             prevEl: ".related-projects__prev",
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
         },
     });
 
@@ -163,9 +171,17 @@ const workImeges = document.querySelector(".work-images-slider");
 if (workImeges) {
     const workSlider = new Swiper(".work-images-nav", {
         spaceBetween: 20,
-        slidesPerView: 10,
+        slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true,
+        breakpoints: {
+            576: {
+                slidesPerView: 6,
+            },
+            768: {
+                slidesPerView: 10,
+            },
+        },
     });
     const workSwiperNav = new Swiper(workImeges, {
         spaceBetween: 20,
