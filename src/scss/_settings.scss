@@ -664,8 +664,8 @@ a {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
     &--active {
-        opacity: 1;
         visibility: visible;
+        opacity: 1;
     }
 }
 .dis-scroll {
