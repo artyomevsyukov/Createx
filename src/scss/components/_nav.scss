@@ -1,6 +1,12 @@
 .nav {
     &__list {
         @include flex-v-center;
+
+        @include tablet {
+            display: block;
+            margin: 0;
+            padding: 50px;
+        }
     }
     &__item {
         &:not(:last-child) {
@@ -9,6 +15,12 @@
         @include minidesk {
             &:not(:last-child) {
                 margin-right: 25px;
+            }
+        }
+        @include tablet {
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 30px;
             }
         }
     }

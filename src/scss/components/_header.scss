@@ -15,10 +15,18 @@
             left: 0;
             top: 0;
             z-index: 500;
+            overflow-y: auto;
             display: block;
-            width: 100%;
+            width: 80%;
             height: 100vh;
             background-color: var(--color-light);
+            transform: translateX(-150%);
+
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &--active {
+            transform: none;
         }
     }
     &--main {
@@ -30,6 +38,16 @@
         left: 0;
         top: 0;
         width: 100%;
+    }
+}
+.header-contacts--nav {
+    padding: 0;
+    padding-left: 50px;
+    .header-contacts__link {
+        margin-bottom: 30px;
+    }
+    @include mobile {
+        padding: 20px;
     }
 }
 
