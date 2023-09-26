@@ -64,7 +64,7 @@
     &__img {
         padding-top: 140px;
         @include minidesk {
-            max-width: 45%;
+            // max-width: 45%;
         }
         @include tablet {
             max-width: 100%;

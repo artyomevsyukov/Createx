@@ -33,7 +33,13 @@
 
     </ul>
     <div class="achieve-content">
-      <img src="img/achieve-man.jpg" alt="" aria-hidden="true" class="achieve__img">
+      <picture>
+        <!-- <source srcset="img/contacts-img.webp" type="image/webp"
+          media="(prefers-color-scheme: light),(max-width:1024px)"> -->
+        <source srcset="img/achieve-man.webp, img/achieve-man_2x.webp 2x" type="image/webp">
+        <img loading="lazy" aria-hidden="true" src="img/achieve-man.jpg" srcset="img/achieve-man_2x.jpg 2x"
+          class="achieve__img" width="525" height="580" alt="achieve-man">
+      </picture>
       <div class="achieve__info">
         <blockquote class="achieve-quote quote">
           <div class="quote__content">
